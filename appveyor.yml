@@ -2,5 +2,13 @@ build: off
 
 test: off
 
+environment:
+  global:
+    STACK_ROOT: "c:\\sr"
+
+    # Override the temp directory to avoid sed escaping issues
+    # See https://github.com/haskell/cabal/issues/5386
+    TMP: "c:\\tmp"
+
 image:
   - Visual Studio 2019
